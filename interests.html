@@ -27,6 +27,10 @@
             user-select: none;
         }
         
+        #mydiv {
+         opacity: 0.1;   
+        }
+        
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
@@ -39,9 +43,9 @@
     <link href="cover.css" rel="stylesheet">
 </head>
 
-<body class="d-flex h-100 text-center text-white bg-dark">
+<body onload="myFunction()" class="d-flex h-100 text-center text-white bg-dark">
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div id ="mydiv" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="mb-auto">
             <div>
                 <h3 class="float-md-start mb-0">Interests</h3>
@@ -97,7 +101,12 @@
 
         </footer>
 
-
+<script>
+  function myFunction() {
+  document.getElementById("mydiv").style.transition = "all 2s";
+  document.getElementById("mydiv").style.opacity = 1;
+}
+</script>
 
 </body>
 
