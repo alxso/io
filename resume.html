@@ -8,7 +8,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
     <title>İskender Soysal | Resume</title>
-    <link rel="shortcut icon" type="image/jpg" href="logo.png"/>
+    <link rel="shortcut icon" type="image/jpg" href="logo.png" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
 
 
@@ -26,7 +26,7 @@
         }
         
         #mydiv {
-         opacity: 0.1;   
+            opacity: 0.1;
         }
         
         @media (min-width: 768px) {
@@ -43,7 +43,11 @@
 
 <body onload="myFunction()" class="d-flex h-100 text-center text-white bg-dark">
 
-    <div id ="mydiv" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <div id="mydiv" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="mb-auto">
             <div>
                 <h3 class="float-md-start mb-0">Resume</h3>
@@ -67,12 +71,12 @@
         </footer>
     </div>
 
-<script>
-  function myFunction() {
-  document.getElementById("mydiv").style.transition = "all 2s";
-  document.getElementById("mydiv").style.opacity = 1;
-}
-</script>
+    <script>
+        function myFunction() {
+            document.getElementById("mydiv").style.transition = "all 2s";
+            document.getElementById("mydiv").style.opacity = 1;
+        }
+    </script>
 
 </body>
 

@@ -8,7 +8,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
     <title>İskender Soysal | Interests</title>
-    <link rel="shortcut icon" type="image/jpg" href="logo.png"/>
+    <link rel="shortcut icon" type="image/jpg" href="logo.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
@@ -28,7 +28,7 @@
         }
         
         #mydiv {
-         opacity: 0.1;   
+            opacity: 0.1;
         }
         
         @media (min-width: 768px) {
@@ -45,7 +45,11 @@
 
 <body onload="myFunction()" class="d-flex h-100 text-center text-white bg-dark">
 
-    <div id ="mydiv" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <div id="mydiv" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="mb-auto">
             <div>
                 <h3 class="float-md-start mb-0">Interests</h3>
@@ -79,13 +83,13 @@
                                 Turkish. </p>
                         </div>
                         <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-                         
+
                             <a href="https://psnprofiles.com/Dave-Gurney"><img style="margin-bottom:20px;" src="https://card.psnprofiles.com/1/Dave-Gurney.png" border="0"></a>
-                            <a href="http://www.steamsignature.com"><img style="margin-bottom:20px;" src="https://www.steamsignature.com/card/0/76561198044226260.png" alt=""/></a>
+                            <a href="http://www.steamsignature.com"><img style="margin-bottom:20px;" src="https://www.steamsignature.com/card/0/76561198044226260.png" alt="" /></a>
                             <p>Oh well...</p>
                             <a href="https://steamcommunity.com/id/dave-gurney/" class="btn border-white bg-white" style="margin:25px">Steam Profile</a>
                             <a href="https://psnprofiles.com/Dave-Gurney?order=percent" class="btn border-white bg-white" style="margin:25px">PSN Profile</a>
-                           
+
                         </div>
 
                         <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"><img style="width:350px;height:200px;margin-bottom:20px;" src="tech.jpg" </img>
@@ -101,12 +105,12 @@
 
         </footer>
 
-<script>
-  function myFunction() {
-  document.getElementById("mydiv").style.transition = "all 2s";
-  document.getElementById("mydiv").style.opacity = 1;
-}
-</script>
+        <script>
+            function myFunction() {
+                document.getElementById("mydiv").style.transition = "all 2s";
+                document.getElementById("mydiv").style.opacity = 1;
+            }
+        </script>
 
 </body>
 

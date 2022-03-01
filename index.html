@@ -8,7 +8,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
     <title>İskender Soysal | About Me</title>
-    <link rel="shortcut icon" type="image/jpg" href="logo.png"/>
+    <link rel="shortcut icon" type="image/jpg" href="logo.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
@@ -28,12 +28,77 @@
         }
         
         #mydiv {
-         opacity: 0.1;   
+            opacity: 0.1;
         }
-
+        
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
+            }
+        }
+        
+        .loader-wrapper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #242f3f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .loader {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            border: 4px solid #Fff;
+            animation: loader 2s infinite ease;
+        }
+        
+        .loader-inner {
+            vertical-align: top;
+            display: inline-block;
+            width: 100%;
+            background-color: #fff;
+            animation: loader-inner 2s infinite ease-in;
+        }
+        
+        @keyframes loader {
+            0% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(180deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            75% {
+                transform: rotate(360deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes loader-inner {
+            0% {
+                height: 0%;
+            }
+            25% {
+                height: 0%;
+            }
+            50% {
+                height: 100%;
+            }
+            75% {
+                height: 100%;
+            }
+            100% {
+                height: 0%;
             }
         }
     </style>
@@ -44,6 +109,10 @@
 </head>
 
 <body onload="myFunction()" class="d-flex h-100 text-center text-white bg-dark">
+
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
 
     <div id="mydiv" class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="mb-auto">
@@ -65,8 +134,7 @@
             <p class="lead"> Software Test Engineer / Quality Assurance Specialist</p>
             <p> Master's student living in Tallinn, actively in search of new challenges.</p>
 
-            <a href="contact.html" class="btn btn-lg btn-secondary fw-bold border-white bg-white"
-                style="margin:25px"> Contact Me</a>
+            <a href="contact.html" class="btn btn-lg btn-secondary fw-bold border-white bg-white" style="margin:25px"> Contact Me</a>
 
         </main>
 
@@ -74,13 +142,16 @@
 
         </footer>
     </div>
-    
-<script>
-  function myFunction() {
-  document.getElementById("mydiv").style.transition = "all 2s";
-  document.getElementById("mydiv").style.opacity = 1;
-}
-</script>
+
+    <script>
+        function myFunction() {
+            document.getElementById("mydiv").style.transition = "all 2s";
+            document.getElementById("mydiv").style.opacity = 1;
+        }
+        $(window).on("load", function() {
+            $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
 
 </body>
 
